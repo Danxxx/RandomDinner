@@ -10,6 +10,6 @@ http.createServer(function(req, res) {
 
   res.end(JSON.stringify(queryAsObject));
 
-}).listen(1337);
+}).listen(process.env.PORT || 1337);
 
 console.log("Server listening on port 1337");
