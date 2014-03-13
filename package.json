@@ -1,0 +1,23 @@
+{
+  "name": "RandomDinner",
+  "version": "0.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Danxxx/RandomDinner.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Danxxx/RandomDinner/issues"
+  },
+  "homepage": "https://github.com/Danxxx/RandomDinner",
+  "dependencies": {
+    "http": "0.0.0",
+    "url": "^0.7.9"
+  }
+}
