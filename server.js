@@ -14,6 +14,6 @@ http.createServer(function(req, res) {
     //var food = food.GetRandomFood();
     res.end(JSON.stringify(test));
 
-}).listen(3000);
+}).listen(process.env.PORT || 3000);
 
 console.log("Server listening on port 3000");
