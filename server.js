@@ -5,7 +5,7 @@ var express = require('express'),
     foodlib = require('./routes/foodlib');
 
 http.createServer(function(req, res) {
-
+    res.header("Access-Control-Allow-Origin", "*");
     var parsedUrl = url.parse(req.url, true); // true to get query as object
     var queryAsObject = parsedUrl.query;
 
