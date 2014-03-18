@@ -22,6 +22,7 @@ var food = [
 
 
 var RandomNummber = function(){
-    var num = Math.floor(Math.random() * 3) + 1;
+    var num = Math.floor(Math.random() * 3);
+    console.log(num);
     return num;
 };
