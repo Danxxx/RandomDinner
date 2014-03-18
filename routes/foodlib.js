@@ -17,6 +17,27 @@ var food = [
     },
     {
         name: 'Flæskestag med katofler'
+    },
+    {
+        name: 'Biksemad'
+    },
+    {
+        name: 'Pasta med kødsovs'
+    },
+    {
+        name: 'Kartofelmos'
+    },
+    {
+        name: 'Boller i karry'
+    },
+    {
+        name: 'Frikadeller med kartofler'
+    },
+    {
+        name: 'Laks'
+    },
+    {
+        name: 'Fiskefiller med pomfritter'
     }
 ];
 
