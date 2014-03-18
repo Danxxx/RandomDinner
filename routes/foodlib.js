@@ -43,7 +43,7 @@ var food = [
 
 
 var RandomNummber = function(){
-    var num = Math.floor(Math.random() * 3);
+    var num = Math.floor(Math.random() * food.length);
     console.log(num);
     return num;
 };
