@@ -1,19 +1,35 @@
-var express = require('express'),
-    path = require('path'),
-    http = require('http'),
-    url = require('url'),
-    foodlib = require('./routes/foodlib');
+/**
+ * Created by danx on 18-03-14.
+ */
+var express = require('express');
+var app = express();
 
-http.createServer(function(req, res) {
-    res.header("Access-Control-Allow-Origin", "*");
-    var parsedUrl = url.parse(req.url, true); // true to get query as object
-    var queryAsObject = parsedUrl.query;
+// Enables CORS
+var enableCORS = function(req, res, next) {
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
+    res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization, Content-Length, X-Requested-With');
 
-    console.log(JSON.stringify(queryAsObject));
-    var test = foodlib.test();
-    //var food = food.GetRandomFood();
-    res.end(JSON.stringify(test));
+    // intercept OPTIONS method
+    if ('OPTIONS' == req.method) {
+        res.send(200);
+    }
+    else {
+        next();
+    }
+};
 
-}).listen(process.env.PORT || 3000);
 
-console.log("Server listening on port 3000");
+// enable CORS!
+app.use(enableCORS);
+//--------------
+
+
+app.get('/',function(req, res){
+    res.send('Hello');
+});
+
+var server =  app.listen(3000, function(){
+    console.log('Listening on port 3000');
+});
+
