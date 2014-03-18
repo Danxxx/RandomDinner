@@ -3,7 +3,7 @@
  */
 var express = require('express');
 var app = express();
-
+var food = require('./routes/foodlib');
 // Enables CORS
 var enableCORS = function(req, res, next) {
     res.header('Access-Control-Allow-Origin', '*');
@@ -26,7 +26,8 @@ app.use(enableCORS);
 
 
 app.get('/',function(req, res){
-    res.send('Hello');
+    var resFood = food.test()
+    res.send(resFood);
 });
 
 var server =  app.listen(process.env.PORT || 3000, function(){
