@@ -30,6 +30,10 @@ app.get('/',function(req, res){
     res.send(resFood);
 });
 
+app.get('/ing',function(req,res){
+   res.send('Ing');
+});
+
 var server =  app.listen(process.env.PORT || 3000, function(){
     console.log('Listening on port 3000');
 });
