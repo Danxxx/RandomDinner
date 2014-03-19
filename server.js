@@ -31,7 +31,8 @@ app.get('/',function(req, res){
 });
 
 app.get('/ing',function(req,res){
-   res.send('Ing');
+   var ingOps = food.getIngs();
+   res.send(ingOps);
 });
 
 var server =  app.listen(process.env.PORT || 3000, function(){

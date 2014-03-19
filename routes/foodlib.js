@@ -31,6 +31,21 @@ var food = [
     }
 ];
 
+module.exports.getIngs = function(){
+    var master = food[0].ing;
+
+    master.push('Test');
+    for(var i = 1; i < food.length; i++){
+        console.log('First loop');
+        for(var j = 0; j < food[i].ing.length; j++){
+            console.log('Second loop')
+            master.push(food[i].ing[j]);
+            console.log(j);
+        }
+    }
+    return (master);
+}
+
 
 var RandomNummber = function(){
     var num = Math.floor(Math.random() * food.length);
