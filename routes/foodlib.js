@@ -11,7 +11,7 @@ module.exports.test = function(){
 var food = [
     {
         name: 'Sandwich med svinenakke og syltede rødløg',
-        ing: ['burgerbolle','sennep','skyr','salatblade','svinenakkekotelet','persille','syltede rødløg'],
+        ing: ['Burgerbolle','Sennep','Skyr','Salatblade','Svinenakkekotelet','Persille','Syltede rødløg'],
         recipe: ''
     },
     {
