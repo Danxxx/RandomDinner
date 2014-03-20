@@ -39,7 +39,7 @@ app.get('/ing',function(req,res){
 
 app.post('/',function(req,res){
     var sparefoods = food.getSpareFood(req);
-    res.send('hej');
+    res.send(sparefoods);
 })
 
 var server =  app.listen(process.env.PORT || 3000, function(){
