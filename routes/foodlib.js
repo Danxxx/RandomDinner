@@ -32,17 +32,17 @@ var food = [
 ];
 
 module.exports.getIngs = function(){
-    var master = food[0].ing;
+    var tmp = food[0].ing.slice(0);
 
     for(var i = 1; i < food.length; i++){
         console.log('First loop');
         for(var j = 0; j < food[i].ing.length; j++){
             console.log('Second loop')
-            master.push(food[i].ing[j]);
+            tmp.push(food[i].ing[j]);
             console.log(j);
         }
     }
-    var arr = master.filter( function( item, index, inputArray ) {
+    var arr = tmp.filter( function( item, index, inputArray ) {
         return inputArray.indexOf(item) == index;
     });
     return (arr);
