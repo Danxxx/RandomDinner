@@ -23,6 +23,8 @@ var enableCORS = function(req, res, next) {
 // enable CORS!
 app.use(enableCORS);
 //--------------
+app.use(express.json());       // to support JSON-encoded bodies
+app.use(express.urlencoded()); // to support URL-encoded bodies
 
 
 app.get('/',function(req, res){
@@ -34,6 +36,11 @@ app.get('/ing',function(req,res){
    var ingOps = food.getIngs();
    res.send(ingOps);
 });
+
+app.post('/',function(req,res){
+    var sparefoods = food.getSpareFood(req);
+    res.send('hej');
+})
 
 var server =  app.listen(process.env.PORT || 3000, function(){
     console.log('Listening on port 3000');

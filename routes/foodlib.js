@@ -54,3 +54,33 @@ var RandomNummber = function(){
     console.log(num);
     return num;
 };
+
+module.exports.getSpareFood = function(input){
+    console.log(input.body.sparefood);
+    var newArray = []
+    var tmpSpareFoodwithCount = {
+        food: {},
+        count: 0
+    }
+    var sparelist = input.body.sparefood;
+    for(var i = 0; i < food.length; i++){
+        tmpSpareFoodwithCount = {
+            food: {},
+            count: 0
+        }
+        for(var j = 0; j < sparelist.length; j++){
+            var index = food[i].ing.indexOf(sparelist[j]);
+            if(index > 0){
+                if(tmpSpareFoodwithCount.count == 0){
+                    tmpSpareFoodwithCount.food = food[i];
+                }
+                tmpSpareFoodwithCount.count ++;
+            }
+        }
+        if(tmpSpareFoodwithCount.count != 0){
+            newArray.push(tmpSpareFoodwithCount);
+        }
+    }
+    console.log(newArray);
+    return (newArray);
+}
