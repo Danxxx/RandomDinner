@@ -70,7 +70,7 @@ module.exports.getSpareFood = function(input){
         }
         for(var j = 0; j < sparelist.length; j++){
             var index = food[i].ing.indexOf(sparelist[j]);
-            if(index > 0){
+            if(index > -1){
                 if(tmpSpareFoodwithCount.count == 0){
                     tmpSpareFoodwithCount.food = food[i];
                 }
